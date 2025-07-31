@@ -3,11 +3,7 @@
 
 ## Contents
 - [Install](#install)
-- [STORM Weights](#STORM-weights)
-- [Dataset](#Dataset)
 - [Train](#train)
-- [Evaluation](#evaluation)
-- [Examples](#Examples)
 
 ## Install
 1. Clone this repository and navigate to STORM folder
@@ -21,13 +17,8 @@ cd STORM
 conda create -n storm python=3.10 -y
 conda activate storm
 pip install --upgrade pip
+pip install -r requirements.txt
 ```
-## STORM Weights
-
-## Dataset
 
 ## Train
 
-## Evaluation
-
-## Examples
