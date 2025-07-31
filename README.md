@@ -34,3 +34,9 @@ All hyperparameters used in finetuning are provided below.
 
 Our base model Qwen2.5-VL-3B-Instruct, which is an instruction-tuned chatbot, must be manually downloaded from [HuggingFace](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct) before running the training scripts, as it won't be downloaded automatically.
 
+### Visual Instruction Tuning
+
+1. Prepare data
+
+Please download the annotation of the final mixture our instruction tuning data [STORM_train_123k.jsonl](https://huggingface.co/datasets/ttlyy/ORD/tree/main/ORD), and download the images from [constituting datasets](https://huggingface.co/datasets/ttlyy/ORD).
+
