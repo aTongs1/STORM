@@ -44,12 +44,11 @@ Please download the annotation of the final mixture our instruction tuning data 
 
 Visual instruction tuning takes around 5 hours for Qwen2.5-VL-3B-Instruct on A100 (80G), with a memory footprint of around 30GB. 
 
-Training script with DeepSpeed ZeRO-3: [`finetune.sh`](https://github.com/haotian-liu/LLaVA/blob/main/scripts/v1_5/finetune.sh).
+Training script with [`finetune_full_3B_ORD_Lite.sh`](https://github.com/aTongs1/STORM/blob/main/scripts/finetune_full_3B_ORD_Lite.sh).
 
 If you are do not have enough GPU memory:
 
-- Use LoRA: [`finetune_lora.sh`](https://github.com/haotian-liu/LLaVA/blob/main/scripts/v1_5/finetune_lora.sh). We are able to fit 13B training in 8-A100-40G/8-A6000, and 7B training in 8-RTX3090. Make sure `per_device_train_batch_size*gradient_accumulation_steps` is the same as the provided script for best reproducibility.
-- Replace `zero3.json` with `zero3_offload.json` which offloads some parameters to CPU RAM. This slows down the training speed.
+- Use LoRA: [`finetune_lora_3B_ORD_Lite.sh`](https://github.com/aTongs1/STORM/blob/main/scripts/finetune_lora_3B_ORD_Lite.sh). 
 
-If you are interested in finetuning LLaVA model to your own task/data, please check out [`Finetune_Custom_Data.md`](https://github.com/haotian-liu/LLaVA/blob/main/docs/Finetune_Custom_Data.md)。
+If you are interested in finetuning Qwen model on our MAX-dataset, please use the training script [`finetune_full_3B_ORD_MAX.sh`](https://github.com/aTongs1/STORM/blob/main/scripts/finetune_full_3B_ORD_MAX.sh).
 
